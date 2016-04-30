@@ -31,7 +31,9 @@ Dowload or clone from Git and then use Maven:
 
 Then install on Apache Karaf
 
- <feature name="jsonquery-jpa" description="JSONQuery JPA" version="1.0.0">
+
+
+<feature name="jsonquery-jpa" description="JSONQuery JPA" version="1.0.0">
         <details>JSONQuery JPA translates JSON queries to JPA queries</details>
         <bundle>mvn:com.mysema.querydsl/querydsl-core/3.7.2</bundle>
         <bundle>mvn:com.google.guava/guava/18.0</bundle>
@@ -52,12 +54,16 @@ Then install on Apache Karaf
         <bundle>mvn:com.fasterxml.jackson.core/jackson-core/2.6.3</bundle>
         
         <bundle start-level="90">mvn:com.sycliff.andromeda/jsonquery-jpa/1.0.0</bundle>
-    </feature>    
+</feature>    
     
 
 ## Sample Backend Usage
 
+
+
 import com.github.markserrano.jsonquery.jpa.response.JqgridResponse;
+
+
 import com.google.common.collect.Lists;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 
@@ -84,13 +90,15 @@ import com.mysema.query.BooleanBuilder;
 import com.mysema.query.types.OrderSpecifier;
 
 
+
+
 @ServiceDependency(required = true)
 private IFilterService<JPAAppUser> service;
 
 
-public JqgridResponse searchAppUsers(String token, Boolean search, String filters, Integer page, Integer rows, String sidx, String sord)  {
 
-        
+
+public JqgridResponse searchAppUsers(String token, Boolean search, String filters, Integer page, Integer rows, String sidx, String sord)  {        
         Order order = new Order(JPAAppUser.class);
         // Prepare arguments before reading from service
         Pageable pageable = new PageRequest(page - 1, rows);
@@ -126,11 +134,14 @@ Here the `query` argument maps to the `query` request parameter, and it contains
 This project is not yet on the central Maven for now. 
 Install in your local maven repo  and  reference like this 
 
+
+
+
 <dependency>
-            <groupId>com.sycliff.andromeda</groupId>
-            <artifactId>jsonquery-jpa</artifactId>
-            <version>1.0.0</version>
-            <type>jar</type>
+        <groupId>com.sycliff.andromeda</groupId>
+         <artifactId>jsonquery-jpa</artifactId>
+         <version>1.0.0</version>
+         <type>jar</type>
  </dependency>
 
 
