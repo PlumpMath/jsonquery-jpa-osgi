@@ -7,7 +7,7 @@
     <packaging>bundle</packaging>
 
     <name>JSONQuery JPA OSGI</name>
-    <description>JSONQuery JPA translates JSON queries to JPA queries compatible with  OSGi, supports Datatable and JqGrid. Forked from https://github.com/markserrano/jsonquery-jpa but without the need for Sping Data Api</description>
+    <description>JSONQuery JPA translates JSON queries to JPA queries compatible with  OSGi, supports Datatable and JqGrid. Forked from https://github.com/markserrano/jsonquery-jpa but without the need for Sping Data API</description>
     <url>https://github.com/markserrano/jsonquery-jpa</url>
     <inceptionYear>2011-2012</inceptionYear>
     <organization>
